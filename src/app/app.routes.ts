@@ -20,7 +20,7 @@ export const routes: Routes = [
       },
     ],
   },
-
+  
   // Redirigir la ruta raíz a la página de login por defecto
   { path: '', redirectTo: '/login', pathMatch: 'full' },
 

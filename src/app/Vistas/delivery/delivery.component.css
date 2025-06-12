@@ -1,0 +1,29 @@
+.btn-nuevo {
+  background-color: #6f42c1;
+  color: white;
+  font-weight: bold;
+}
+
+.btn-nuevo:hover {
+  background-color: #5a349b;
+  color: white;
+}
+
+/* Ajustes para que los botones de acción tengan un tamaño consistente */
+.table .btn {
+    min-width: 120px;
+    margin-bottom: 5px; /* Espacio para el wrapping en móvil */
+}
+.modal-overlay {
+  position: fixed; /* Se queda fijo en la pantalla */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Fondo negro semi-transparente */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000; /* Se asegura de que esté por encima de todo */
+}
+
