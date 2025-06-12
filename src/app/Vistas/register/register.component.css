@@ -27,15 +27,17 @@
 }
 
 .form-group {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centra horizontalmente los hijos */
   margin-bottom: 20px;
-  text-align: left;
 }
 
 .form-group label {
-  display: block;
   margin-bottom: 5px;
   font-weight: 600;
   color: #555;
+  text-align: center;
 }
 
 .form-control {
