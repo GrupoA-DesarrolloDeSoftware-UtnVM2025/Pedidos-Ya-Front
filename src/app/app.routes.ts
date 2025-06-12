@@ -1,29 +1,29 @@
 import { Routes } from '@angular/router';
-
-// ... (tus otros imports)
-import { HomeComponent } from './Vistas/home/home.component';
-import { DeliveryFormComponent } from './Vistas/nuevo-delivery/nuevo-delivery.component';
-// ▼▼▼ 1. IMPORTA EL NUEVO COMPONENTE ▼▼▼
-import { EstadoFormComponent } from './Vistas/estado/estado.component';
-import { RegisterComponent } from './Vistas/register/register.component';
-import { LoginComponent } from './Vistas/login/login.component';
-import { DeliveryComponent } from './Vistas/delivery/delivery.component';
-import { UbicacionFormComponent } from './Vistas/ubicacion/ubicacion.component';
+import { TemplateComponent } from './pages/template/template.component';
+import { HomeComponent } from './pages/home/home.component';
+import { LoginComponent } from './Vistas/login/login.component'; // Corregido para usar el componente de Vistas
+import { RegisterComponent } from './Vistas/register/register.component'; // El nuevo componente
 
 export const routes: Routes = [
-  // ... (rutas de login, register)
+  // Rutas de autenticación
   { path: 'login', component: LoginComponent },
   { path: 'register', component: RegisterComponent },
 
-  // Rutas principales de la aplicación
-  { path: 'home', component: HomeComponent },
-  { path: 'delivery', component: DeliveryComponent },
-  { path: 'delivery/nuevo', component: DeliveryFormComponent },
-  // ▼▼▼ 2. AÑADE LA NUEVA RUTA CON EL PARÁMETRO :id ▼▼▼
-  { path: 'delivery/estado/:id', component: EstadoFormComponent },
-  { path: 'delivery/ubicacion/:id', component: UbicacionFormComponent },
-
-  // ... (redirecciones)
+  // Ruta principal de la aplicación (una vez que el usuario ha iniciado sesión)
+  {
+    path: 'home',
+    component: TemplateComponent,
+    children: [
+      {
+        path: '',
+        component: HomeComponent,
+      },
+    ],
+  },
+  
+  // Redirigir la ruta raíz a la página de login por defecto
   { path: '', redirectTo: '/login', pathMatch: 'full' },
+
+  // Opcional: Redirigir cualquier ruta no encontrada a login
   { path: '**', redirectTo: '/login' }
 ];
