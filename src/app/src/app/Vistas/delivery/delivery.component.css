@@ -1,0 +1,16 @@
+.btn-nuevo {
+  background-color: #6f42c1;
+  color: white;
+  font-weight: bold;
+}
+
+.btn-nuevo:hover {
+  background-color: #5a349b;
+  color: white;
+}
+
+/* Ajustes para que los botones de acción tengan un tamaño consistente */
+.table .btn {
+    min-width: 120px;
+    margin-bottom: 5px; /* Espacio para el wrapping en móvil */
+}
