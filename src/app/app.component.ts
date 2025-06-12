@@ -1,12 +1,10 @@
 import { Component } from '@angular/core';
-// Es posible que tengas 'RouterOutlet' aquí, déjalo si está.
-// import { RouterOutlet } from '@angular/router';
-import { LoginComponent } from './Vistas/login/login.component'; // <-- 1. IMPORTAS EL COMPONENTE
+import { RouterOutlet } from '@angular/router'; // <-- 1. IMPORTA RouterOutlet
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [LoginComponent], // <-- 2. LO AÑADES A LA LISTA DE IMPORTS
+  imports: [RouterOutlet], // <-- 2. AÑÁDELO a la lista de IMPORTS
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
