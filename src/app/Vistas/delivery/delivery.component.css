@@ -14,3 +14,16 @@
     min-width: 120px;
     margin-bottom: 5px; /* Espacio para el wrapping en móvil */
 }
+.modal-overlay {
+  position: fixed; /* Se queda fijo en la pantalla */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Fondo negro semi-transparente */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000; /* Se asegura de que esté por encima de todo */
+}
+

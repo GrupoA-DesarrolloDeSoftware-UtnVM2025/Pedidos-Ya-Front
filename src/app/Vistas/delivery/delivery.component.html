@@ -49,8 +49,8 @@
           </td>
           <td>{{ item.nombreZona }}</td>
           <td class="text-center">
-            <button class="btn btn-primary btn-sm me-1" (click)="editarUbicacion(item.id)">📝 Editar Ubicación</button>
-            <button class="btn btn-secondary btn-sm me-1" (click)="editarEstado(item.id)">🔄 Editar Estado</button>
+            <a class="btn btn-primary btn-sm me-1" [routerLink]="['/delivery/ubicacion', item.id]">📝 Editar Ubicación</a>
+            <a class="btn btn-secondary btn-sm me-1" [routerLink]="['/delivery/estado', item.id]">📝 Editar Estado</a>
             <button class="btn btn-danger btn-sm" (click)="borrar(item.id)">🗑️ Borrar</button>
           </td>
         </tr>
