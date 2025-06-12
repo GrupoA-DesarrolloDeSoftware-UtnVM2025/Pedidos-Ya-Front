@@ -1,0 +1,43 @@
+<nav class="navbar navbar-expand-lg bg-body-tertiary shadow-sm">
+  <div class="container-fluid">
+    <a class="navbar-brand" routerLink="/home"><strong>PedidosYa</strong></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/home" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/delivery" routerLinkActive="active">Delivery</a>
+        </li>
+      </ul>
+      <a class="btn btn-outline-danger" routerLink="/login">Salir</a>
+    </div>
+  </div>
+</nav>
+
+<div class="container py-5">
+  <div class="text-center mb-5">
+    <h1 class="fw-bold">Explorá las mejores opciones</h1>
+    <p class="text-muted">Descubrí lo más pedido cerca tuyo</p>
+  </div>
+
+  <div class="row row-cols-1 row-cols-md-3 g-4">
+    @for(item of items;track $index){
+    <div class="col">
+      <div class="card h-100 shadow-sm">
+        <img [src]="item.image" class="card-img-top" >
+        <div class="card-body">
+          <h5 class="card-title">{{ item.name }}</h5>
+          <p class="card-text text-muted">{{ item.description }}</p>
+        </div>
+        <div class="card-footer bg-white border-top-0">
+          <button class="btn btn-primary w-100">Ver más</button>
+        </div>
+      </div>
+    </div>
+    }
+  </div>
+</div>
